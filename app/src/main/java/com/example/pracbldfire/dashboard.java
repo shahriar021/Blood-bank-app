@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class dashboard extends AppCompatActivity {
-    CardView friends,exit;
+    CardView friends,exit,profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +16,7 @@ public class dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
         friends=findViewById(R.id.friends);
         exit=findViewById(R.id.exit);
+        profile=findViewById(R.id.profile);
         friends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,6 +29,15 @@ public class dashboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(dashboard.this,profile.class);
+                startActivity(i);
             }
         });
     }
