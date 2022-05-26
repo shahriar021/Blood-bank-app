@@ -36,7 +36,7 @@ public class dashboard extends AppCompatActivity {
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(dashboard.this,profile.class);
+                Intent i = new Intent(dashboard.this,self.class);
                 startActivity(i);
             }
         });
